@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        .search-container {
+            margin: 20px;
+        }
+        input {
+            padding: 8px;
+            width: 200px;
+            font-size: 16px;
+        }
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .card {
+            background: white;
+            width: 300px;
+            margin: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card img {
+            width: 100%;
+            height: 180px;
+            border-radius: 5px;
+        }
+        .card h2 {
+            font-size: 20px;
+            color: #333;
+        }
+        .card p {
+            color: #666;
+        }
+        .card .price {
+            font-size: 18px;
+            color: green;
+            font-weight: bold;
+        }
+        .rating {
+            color: goldenrod;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Vehicle Listings</h1>
+    <div class="search-container">
+        <input type="text" id="vehicleId" placeholder="Enter Vehicle ID">
+        <button onclick="fetchVehicleById()">Search</button>
+        <button onclick="fetchAllVehicles()">Show All</button>
+    </div>
+
+    <div class="container" id="vehicleContainer"></div>
+
+    <script>
+        function fetchAllVehicles() {
+            fetch("http://localhost:3000/vehcles")
+                .then(response => response.json())
+                .then(data => displayVehicles(data.vehcle))
+                .catch(error => console.error("Error fetching vehicles:", error));
+        }
+
+        function fetchVehicleById() {
+            let id = document.getElementById("vehicleId").value;
+            if (!id) {
+                alert("Please enter a valid vehicle ID.");
+                return;
+            }
+
+            fetch(`http://localhost:3000/vehcles/${id}`)
+                .then(response => response.json())
+                .then(data => displayVehicles(data.data))
+                .catch(error => console.error("Error fetching vehicle:", error));
+        }
+
+        function displayVehicles(vehicles) {
+            let container = document.getElementById("vehicleContainer");
+            container.innerHTML = "";
+
+            if (vehicles.length === 0) {
+                container.innerHTML = "<h3>No Vehicles Found!</h3>";
+                return;
+            }
+
+            vehicles.forEach(vehicle => {
+                let card = `
+                    <div class="card">
+                        <img src="${vehicle.image}" alt="${vehicle.title}">
+                        <h2>${vehicle.title}</h2>
+                        <p>${vehicle.description}</p>
+                        <p class="price">$${vehicle.price.toFixed(2)}</p>
+                        <p class="rating">⭐ ${vehicle.rating.rate} (${vehicle.rating.count} reviews)</p>
+                    </div>
+                `;
+                container.innerHTML += card;
+            });
+        }
+
+        // Fetch all vehicles when the page loads
+        fetchAllVehicles();
+    </script>
+
+</body>
+</html>

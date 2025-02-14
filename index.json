@@ -1,0 +1,138 @@
+{
+  "vehcle": [
+    {
+      "id": 1,
+      "title": "Tesla Model S",
+      "price": 79999.99,
+      "description": "Electric luxury sedan with cutting-edge technology and performance.",
+      "category": "electric vehicle",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/14/2018_Tesla_Model_S_75D.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 300
+      }
+    },
+    {
+      "id": 2,
+      "title": "Ford Mustang",
+      "price": 55999.99,
+      "description": "Classic American muscle car with powerful engine options.",
+      "category": "sports car",
+      "image": "https://imgd.aeplcdn.com/664x374/cw/ec/23766/Ford-Mustang-Exterior-126883.jpg?wm=0&q=80",
+      "rating": {
+        "rate": 4.7,
+        "count": 400
+      }
+    },
+    {
+      "id": 3,
+      "title": "Chevrolet Corvette",
+      "price": 65999.99,
+      "description": "High-performance sports car with sleek design and impressive speed.",
+      "category": "sports car",
+      "image": "https://inv.assets.sincrod.com/RTT/Chevrolet/2024/6091243/default/ext_G8G_deg01.jpg",
+      "rating": {
+        "rate": 4.9,
+        "count": 250
+      }
+    },
+
+    {
+      "id": 4,
+      "title": "BMW 3 Series",
+      "price": 41999.99,
+      "description": "Luxury sedan with precise handling and a stylish interior.",
+      "category": "luxury car",
+      "image": "https://www.bmw.in/content/dam/bmw/common/all-models/3-series/sedan/2022/navigation/bmw-3-series-sedan-lci-modelfinder.png",
+      "rating": {
+        "rate": 4.6,
+        "count": 500
+      }
+    },
+    {
+      "id": 5,
+      "title": "Audi A4",
+      "price": 43999.99,
+      "description": "Compact luxury sedan known for its refined ride and tech features.",
+      "category": "luxury car",
+      "image": "https://imgd.aeplcdn.com/1920x1080/n/cw/ec/51909/a4-exterior-right-front-three-quarter-2.jpeg?q=80&q=80",
+      "rating": {
+        "rate": 4.5,
+        "count": 320
+      }
+    },
+    {
+      "id": 6,
+      "title": "Honda Civic",
+      "price": 22999.99,
+      "description": "Reliable compact car with great fuel efficiency and low maintenance.",
+      "category": "compact car",
+      "image": "https://imgd.aeplcdn.com/664x374/n/cw/ec/27074/civic-exterior-right-front-three-quarter-148155.jpeg?q=80",
+      "rating": {
+        "rate": 4.3,
+        "count": 200
+      }
+    },
+    {
+      "id": 7,
+      "title": "Toyota Camry",
+      "price": 24999.99,
+      "description": "Comfortable mid-size sedan offering reliability and safety.",
+      "category": "sedan",
+      "image": "https://static3.toyotabharat.com/images/showroom/new-camry/elegance-1000x313.png",
+      "rating": {
+        "rate": 4.4,
+        "count": 450
+      }
+    },
+    {
+      "id": 8,
+      "title": "Mercedes-Benz S-Class",
+      "price": 109999.99,
+      "description": "Luxurious flagship sedan with exceptional comfort and performance.",
+      "category": "luxury car",
+      "image": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Mercedes-Benz/S-Class/10853/1690451611932/front-view-118.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 150
+      }
+    },
+    {
+      "id": 9,
+      "title": "Nissan Altima",
+      "price": 25999.99,
+      "description": "Stylish sedan with strong performance and modern tech features.",
+      "category": "sedan",
+      "image": "https://media.ed.edmunds-media.com/nissan/altima/2025/oem/2025_nissan_altima_sedan_25-sv_fq_oem_1_1280.jpg",
+      "rating": {
+        "rate": 4.2,
+        "count": 400
+      }
+    },
+    {
+      "id": 10,
+      "title": "Subaru Outback",
+      "price": 33999.99,
+      "description": "All-wheel-drive wagon perfect for adventure with ample cargo space.",
+      "category": "SUV",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFCQeCIOYxmTIK_c8ecsJtchhGCfvMt1KCLQ&s",
+      "rating": {
+        "rate": 4.7,
+        "count": 350
+      }
+    },
+    {
+      "id": 11,
+      "title": "Jeep Wrangler",
+      "price": 35999.99,
+      "description": "Iconic off-road SUV known for its rugged design and capability.",
+      "category": "SUV",
+      "image": "https://imgd.aeplcdn.com/1920x1080/n/cw/ec/174975/wrangler-facelift-exterior-right-front-three-quarter.jpeg?isig=0&q=80&q=80",
+      "rating": {
+        "rate": 4.5,
+        "count": 600
+      }
+    }
+  ]
+}
+    
